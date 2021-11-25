@@ -1,0 +1,3 @@
+I copied this from ~/.config/oomox/colors, it should be easily importable by "oomox colors file" in the interface
+
+This then can be exported to gtk and qt theme/colorscheme in the interface

@@ -1,0 +1,1 @@
+The current font being using in the system is Hack 11pt font. Check .Xresources for the colors 

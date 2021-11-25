@@ -1,0 +1,61 @@
+urxvt.perl-ext-common: resize-font
+
+URxvt*font:xft:Hack:regular:size=11
+!URxvt*font:xft:terminus:regular:size=12
+
+!adjust letter kerning
+URxvt.letterSpace: -1
+
+!enable blinking cursor
+URxvt.cursorBlink: 1
+
+!get rid of ugly scroll bar
+URxvt.scrollBar: false
+
+!disable annoying ctrl+shift modes
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+! connors urxvt/system theme
+! was made w/ help from http://terminal.sexy and gcolor3
+
+! special
+URxvt.foreground:   #c5c8c6
+URxvt.background: #272833
+URxvt.cursorColor:  #c5c8c6
+!Transparency version of background:
+!URxvt.depth: 32
+!URxvt.background: [75]#272833
+
+! black
+URxvt.color0:       #282a2e
+URxvt.color8:       #373b41
+
+! red
+URxvt.color1:       #a54242
+URxvt.color9:       #cc6666
+
+! green
+URxvt.color2:       #919f59
+URxvt.color10:      #a0b765
+
+! yellow
+URxvt.color3:       #de935f
+URxvt.color11:      #f0c674
+
+! blue
+URxvt.color4:       #466279
+URxvt.color12:      #5f819d 
+
+! magenta
+URxvt.color5:       #85678f
+URxvt.color13:      #b294bb
+
+! cyan
+URxvt.color6:       #62878d
+URxvt.color14:      #87b7ba
+
+! white
+URxvt.color7:       #b7bec5
+URxvt.color15:      #c5c8c6
+
