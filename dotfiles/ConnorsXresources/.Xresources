@@ -1,6 +1,6 @@
 urxvt.perl-ext-common: resize-font
 
-URxvt*font:xft:Hack:regular:size=11
+URxvt*font:xft:Hack Nerd Font:regular:size=11
 !URxvt*font:xft:terminus:regular:size=12
 
 !adjust letter kerning
