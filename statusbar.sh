@@ -30,8 +30,8 @@ mem() {
 }
 
 clock() {
-	printf "^c$background^^b$light_blue^   "
-	printf "^c$background^^b$blue^ $(date '+%H:%M, %b %d') "
+	printf "^c$foreground^^b$light_blue^   "
+	printf "^c$foreground^^b$blue^ $(date '+%H:%M, %b %d') "
 }
 
 pulseaudiovol() {
