@@ -24,7 +24,7 @@ cpu() {
 }
 
 mem() {
-	mem=$(free | grep Mem | awk '{print $3/$2 * 100.0}' | sed "s/\..*//g")		#stolen from: https://stackoverflow.com/questions/10585978/how-to-get-the-percentage-of-memory-free-with-a-linux-command
+	mem=$(free | grep Mem | awk '{print $3/$2 * 100.0}' | sed "s/\..*//g")	#stolen from: https://stackoverflow.com/questions/10585978/how-to-get-the-percentage-of-memory-free-with-a-linux-command
 	printf "^c$background^^b$yellow^ MEM "
 	printf "^c$foreground^^b$light_black^ $mem%% "		#escape %
 }
@@ -65,19 +65,22 @@ reset() {
 }
 
 
-update() {
-	xsetroot -name "$(pulseaudiovol)$(reset)  $(cpu)$(reset)  $(mem)$(reset)  $(clock)$(reset)  $(end)$(reset) "
-}
+updateTicks=200
+tick=0
 
-updateTicks=1;
-tick=0;
-
+cpu_str=$(cpu) #initial reading
 
 while true; do
-	if [[ $(($tick % $updateTicks)) == 0 ]]; then #only update if tick is a multiple of updateTicks
-		$(update)
+	if [[ $(($tick % $updateTicks)) == 0 ]]; then 
+		#this exists so cpu status will update slower than everytyhing else, that the 1 second delay the cpu reading requires doesn't have to happen every time everything else wants to update.
+		cpu_str=$(cpu) #requires 1sec wait
+		tick=0
 	fi;	
 	tick=$(($tick + 1))
 
-	sleep 1;
+	barstring="$(pulseaudiovol)$(reset)  $cpu_str$(reset)  $(mem)$(reset)  $(clock)$(reset)  $(end)$(reset) "
+	xsetroot -name "$barstring"
+
+	sleep 0.001 #keeps things in check
+
 done;
