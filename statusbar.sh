@@ -13,30 +13,8 @@ green="#889C43"
 light_green="#a0b765"
 blue="#466279"
 light_blue="#5f819d"
-
-1cspacer() {	#1-char spacer
-	printf "^b$background^ "
-}
-
-2cspacer() {	#2-char spacer
-	printf "^b$background^  "
-}
-
-3cspacer() {	#3-char spacer
-	printf "^b$background^   "
-}
-
-4cspacer() {	#4-char spacer
-	printf "^b$background^    "
-}
-
-5cspacer() {	#5-char spacer
-	printf "^b$background^     "
-}
-
-6cspacer() {	#6-char spacer
-	printf "^b$background^      "
-}
+cyan="#62878d"
+light_cyan="#87b7ba"
 
 cpu() {
 	cpu_avg=$(printf $[100-$(vmstat 1 2|tail -1|awk '{print $15}')])		#Fetch cpu load over a period of time (stolen from: https://askubuntu.com/questions/274349/getting-cpu-usage-realtime
@@ -53,7 +31,28 @@ mem() {
 
 clock() {
 	printf "^c$background^^b$light_blue^   "
-	printf "^c$foreground^^b$blue^ $(date '+%H:%M, %b %d') "
+	printf "^c$background^^b$blue^ $(date '+%H:%M, %b %d') "
+}
+
+pulseaudiovol() {
+    VOL=$(pamixer --get-volume)
+    STATE=$(pamixer --get-mute)
+
+	printf "  ^c$light_cyan^^b$background^$VOL%%"
+	
+	printf "^c$light_cyan^^b$background^ "    
+ 
+	if [ "$STATE" = "true" ] || [ "$VOL" -eq 0 ]; then
+		printf "婢"
+	elif [ "$VOL" -gt 0 ] && [ "$VOL" -le 33 ]; then
+		printf ""
+	elif [ "$VOL" -gt 33 ] && [ "$VOL" -le 66 ]; then
+		printf "墳"
+	else
+		printf ""
+	fi
+
+	printf " "
 }
 
 end() {
@@ -61,21 +60,23 @@ end() {
 }
 
 
-
+reset() {
+	printf "^c$foreground^^b$background^"
+}
 
 
 update() {
-	xsetroot -name "$(2cspacer)$(cpu)$(2cspacer)$(mem)$(2cspacer)$(clock)$(2cspacer)$(end)$(1cspacer)"
+	xsetroot -name "$(pulseaudiovol)$(reset)  $(cpu)$(reset)  $(mem)$(reset)  $(clock)$(reset)  $(end)$(reset) "
 }
 
 updateTicks=1;
 tick=0;
 
+
 while true; do
 	if [[ $(($tick % $updateTicks)) == 0 ]]; then #only update if tick is a multiple of updateTicks
 		$(update)
 	fi;	
-
 	tick=$(($tick + 1))
 
 	sleep 1;

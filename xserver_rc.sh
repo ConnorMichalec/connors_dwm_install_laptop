@@ -12,13 +12,14 @@ feh --bg-fill ~/Pictures/Wallpapers/Stars_space_2monitor_right_1.jpg --bg-fill ~
 #load Xresources
 [[ -f ~/.Xresources ]] && xrdb ~/.Xresources
 
-#start dwm bar
-/home/connor/dwm_install/statusbar.sh &
-
-
 #authentication agent
 lxpolkit & 
 
+#start dwm bar
+/home/connor/dwm_install/statusbar.sh &
+
 #start dwm
 exec dwm
+
+
 
