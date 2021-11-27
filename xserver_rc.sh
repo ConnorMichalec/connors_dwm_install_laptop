@@ -16,7 +16,7 @@ feh --bg-fill ~/Pictures/Wallpapers/Stars_space_2monitor_right_1.jpg --bg-fill ~
 lxpolkit & 
 
 #start dwm bar
-/home/connor/dwm_install/statusbar.sh &
+/home/connor/connors_dwm_install/statusbar.sh &
 
 #start dwm
 exec dwm
