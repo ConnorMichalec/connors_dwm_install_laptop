@@ -5,7 +5,7 @@
     selected-normal-foreground:  #272833; 
     foreground:                  #c5c8c6; 
     background:                  #272833;
-    border-color:                #a0b675;
+    border-color:                #5f819d;
     normal-foreground:           @foreground;
     alternate-normal-background: @background;
     selected-urgent-foreground:  @background;
