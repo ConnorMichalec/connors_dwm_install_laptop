@@ -36,6 +36,11 @@ echo "install icon theme"
 cp -r dotfiles/ConnorsSystemBluetheme/iconThemes/Vimix-Beryl ~/.local/share/icons/.
 
 echo ""
+echo "install system theme"
+mkdir ~/.themes
+cp -r dotfiles/ConnorsSystemBluetheme/themes/oomox-ConnorsSystemBluetheme ~/.themes
+
+echo ""
 echo "write kde globals(for dolphin)"
 cat dotfiles/ConnorsSystemBluetheme/kdeGlobals/kdeglobals > ~/.config/kdeglobals
 
