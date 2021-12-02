@@ -1,1 +1,2 @@
 https://github.com/vinceliuice/vimix-icon-theme 
+installs to ~/.local/share/icons(or /usr/share/icons)
