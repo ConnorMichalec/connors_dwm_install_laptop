@@ -64,9 +64,13 @@ mkdir ~/Pictures
 cp -r dotfiles/ConnorsWallpapers/Wallpapers ~/Pictures/.
 
 echo ""
-echo "install dolphin, urxvt, rofi, btop, pamixer, picom, lxsession, feh"
+echo "append qt5ct required environment vars to /etc/environment"
+sudo bash -c "echo QT_QPA_PLATFORMTHEME=qt5ct >> /etc/environment"
+
+echo ""
+echo "install dolphin, urxvt, rofi, btop, pamixer, picom, lxsession, feh, qt5ct, lxappearance"
 sudo pacman -Syy
-sudo pacman -S dolphin rxvt-unicode rofi btop pamixer lxsession feh
+sudo pacman -S dolphin rxvt-unicode rofi btop pamixer lxsession feh lxappearance qt5ct
 
 #final message:
 echo ""
