@@ -50,9 +50,9 @@ sudo unzip Hack.zip -d /usr/share/fonts/TTF/
 rm Hack.zip
 
 echo ""
-echo "install dolphin, urxvt, rofi"
+echo "install dolphin, urxvt, rofi, btop, pamixer"
 sudo pacman -Syy
-sudo pacman -S dolphin rxvt-unicode rofi
+sudo pacman -S dolphin rxvt-unicode rofi btop pamixer
 
 #final message:
 echo ""
@@ -61,3 +61,4 @@ echo "1) Firefox theme can be found in dotfiles/ConnorsFirefox, this installs as
 echo "2) Set GTK2 and GTK3 theme appropriately, a tool like lxappearance is a good tool that can do both."
 echo "3) Set the QT5 Colorscheme using a tool such as qt5ct."
 echo "4) Set konsole theme appropriately, as this will allows konsole's built in terminal to match urxvt"
+echo "5) Set btop to use nordic theme as well as vim keys"
