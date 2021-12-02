@@ -50,7 +50,11 @@ sudo unzip Hack.zip -d /usr/share/fonts/TTF/
 rm Hack.zip
 
 echo ""
-echo "install dolphin, urxvt, rofi, btop, pamixer"
+echo "write picom config"
+cp -r dotfiles/ConnorsPicomConf/picom ~/.config/.
+
+echo ""
+echo "install dolphin, urxvt, rofi, btop, pamixer, picom"
 sudo pacman -Syy
 sudo pacman -S dolphin rxvt-unicode rofi btop pamixer
 
