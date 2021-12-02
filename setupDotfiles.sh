@@ -19,6 +19,11 @@ echo "append xresources"
 cat dotfiles/ConnorsXresources/.Xresources >> ~/.Xresources
 
 echo ""
+echo "write konsole colorscheme"
+mkdir ~/.local/share/konsole
+cp dotfiles/ConnorsKonsole_xresources_copied/ConnorsSystemBluetheme.colorscheme ~/.local/share/konsole/.
+
+echo ""
 echo "append tmux config"
 #run as root
 sudo bash -c "cat dotfiles/ConnorsTmuxConf/tmux.conf >> /etc/tmux.conf" 
@@ -68,15 +73,15 @@ echo "append qt5ct required environment vars to /etc/environment"
 sudo bash -c "echo QT_QPA_PLATFORMTHEME=qt5ct >> /etc/environment"
 
 echo ""
-echo "install dolphin, urxvt, rofi, btop, pamixer, picom, lxsession, feh, qt5ct, lxappearance"
+echo "install dolphin, urxvt, rofi, btop, pamixer, picom, lxsession, feh, qt5ct, lxappearance, konsole"
 sudo pacman -Syy
-sudo pacman -S dolphin rxvt-unicode rofi btop pamixer lxsession feh lxappearance qt5ct
+sudo pacman -S dolphin rxvt-unicode rofi btop pamixer lxsession feh lxappearance qt5ct konsole
 
 #final message:
 echo ""
 echo "REMAINING STEPS: "
 echo "1) Firefox theme can be found in dotfiles/ConnorsFirefox, this installs as an addon"
-echo "2) Set GTK2 and GTK3 theme appropriately, a tool like lxappearance is a good tool that can do both."
-echo "3) Set the QT5 Colorscheme using a tool such as qt5ct."
+echo "2) Set GTK2 and GTK3 theme and font, a tool like lxappearance is a good tool that can do both."
+echo "3) Set the QT5 Colorscheme and font using a tool such as qt5ct."
 echo "4) Set konsole theme appropriately, as this will allows konsole's built in terminal to match urxvt"
 echo "5) Set btop to use nordic theme as well as vim keys"
