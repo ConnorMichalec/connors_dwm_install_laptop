@@ -59,9 +59,9 @@ mkdir ~/Pictures
 cp -r dotfiles/ConnorsWallpapers/Wallpapers ~/Pictures/.
 
 echo ""
-echo "install dolphin, urxvt, rofi, btop, pamixer, picom"
+echo "install dolphin, urxvt, rofi, btop, pamixer, picom, lxsession"
 sudo pacman -Syy
-sudo pacman -S dolphin rxvt-unicode rofi btop pamixer
+sudo pacman -S dolphin rxvt-unicode rofi btop pamixer lxsession
 
 #final message:
 echo ""
