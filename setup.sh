@@ -62,10 +62,6 @@ mkdir ~/.config
 cp -r dotfiles/ConnorsRofiConf/rofi/ ~/.config/.
 
 echo ""
-echo "make sure unzip is installed"
-sudo pacman -S unzip
-
-echo ""
 echo "download and install hack nerd font"
 curl -L -O https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
 sudo mkdir -p /usr/share/fonts/TTF/
