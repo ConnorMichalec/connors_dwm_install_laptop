@@ -93,6 +93,12 @@ echo ""
 echo "install archey(through yay)"
 yay -S archey --noconfirm
 
+echo ""
+echo "build and install dwm itself"
+cd dwm
+sudo make clean install
+cd ..
+
 #final message:
 echo ""
 echo "REMAINING STEPS: "
