@@ -1,0 +1,9 @@
+configuration {
+	modi: "drun";
+	font: "Hack Nerd Font 11";
+	show-icons: true;
+	icon-theme: "Vimix-Beryl";
+}
+
+@theme "~/.config/rofi/ConnorsSystemBluetheme"
+
