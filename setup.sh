@@ -7,7 +7,7 @@ echo ""
 echo "install dolphin, urxvt, rofi, btop, pamixer, picom, lxsession, feh, qt5ct, lxappearance, konsole, unzip, tmux, vim, base-devel, xorg, xorg-xinit, libx11, libxinerama, libxft, webkit2gtk, git"
 sudo pacman -Syy
 sudo pacman -S archlinux-keyring --noconfirm #to fix pgp correupted problems
-sudo pacman -S dolphin rxvt-unicode rofi btop pamixer lxsession feh lxappearance qt5ct konsole unzip vim base-devel xorg xorg-xinit libx11 libxinerama libxft webkit2gtk git --noconfirm
+sudo pacman -S dolphin rxvt-unicode rofi btop pamixer lxsession feh lxappearance qt5ct konsole unzip tmux vim base-devel xorg xorg-xinit libx11 libxinerama libxft webkit2gtk git --noconfirm
 
 echo "write .xinitrc"
 cat dotfiles/ConnorsSystemRC/ConnorsXinitrc/.xinitrc > ~/.xinitrc
