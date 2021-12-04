@@ -20,7 +20,7 @@ cat dotfiles/ConnorsXresources/.Xresources >> ~/.Xresources
 
 echo ""
 echo "write konsole colorscheme"
-mkdir ~/.local/share/konsole
+mkdir -p ~/.local/share/konsole
 cp dotfiles/ConnorsKonsole_xresources_copied/ConnorsSystemBluetheme.colorscheme ~/.local/share/konsole/.
 
 echo ""
@@ -51,6 +51,7 @@ cat dotfiles/ConnorsSystemBluetheme/kdeGlobals/kdeglobals > ~/.config/kdeglobals
 
 echo ""
 echo "write rofi config files"
+mkdir ~/.config
 cp -r dotfiles/ConnorsRofiConf/rofi/ ~/.config/.
 
 echo ""
