@@ -85,6 +85,13 @@ echo ""
 echo "append qt5ct required environment vars to /etc/environment"
 sudo bash -c "echo QT_QPA_PLATFORMTHEME=qt5ct >> /etc/environment"
 
+echo ""
+echo "install yay"
+git clone https://aur.archlinux.org/yay-git.git
+cd yay-git
+makepkg -si
+cd ..
+rm -r yay-git
 
 #final message:
 echo ""
