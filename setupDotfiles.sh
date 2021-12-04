@@ -43,6 +43,7 @@ cat dotfiles/ConnorsVimrc/.vimrc >> ~/.vimrc
 
 echo ""
 echo "install icon theme"
+mkdir -p ~/.local/share/icons
 cp -r dotfiles/ConnorsSystemBluetheme/iconThemes/Vimix-Beryl ~/.local/share/icons/.
 
 echo ""
