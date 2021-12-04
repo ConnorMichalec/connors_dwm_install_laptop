@@ -6,6 +6,7 @@ cd "$(dirname "$0")"
 echo ""
 echo "install dolphin, urxvt, rofi, btop, pamixer, picom, lxsession, feh, qt5ct, lxappearance, konsole, unzip, tmux, vim"
 sudo pacman -Syy
+sudo pacman -S archlinux-keyring #to fix pgp correupted problems
 sudo pacman -S dolphin rxvt-unicode rofi btop pamixer lxsession feh lxappearance qt5ct konsole unzip vim
 
 echo "write .xinitrc"
