@@ -4,10 +4,10 @@
 cd "$(dirname "$0")"
 
 echo ""
-echo "install dolphin, urxvt, rofi, btop, pamixer, picom, lxsession, feh, qt5ct, lxappearance, konsole, unzip, tmux, vim"
+echo "install dolphin, urxvt, rofi, btop, pamixer, picom, lxsession, feh, qt5ct, lxappearance, konsole, unzip, tmux, vim, base-devel, xorg-server, libx11, libxinerama, libxft, webkit2gtk, archey, git"
 sudo pacman -Syy
 sudo pacman -S archlinux-keyring #to fix pgp correupted problems
-sudo pacman -S dolphin rxvt-unicode rofi btop pamixer lxsession feh lxappearance qt5ct konsole unzip vim
+sudo pacman -S dolphin rxvt-unicode rofi btop pamixer lxsession feh lxappearance qt5ct konsole unzip vim base-devel xorg-server libx11 libxinerama libxft webkit2gtk archey git
 
 echo "write .xinitrc"
 cat dotfiles/ConnorsSystemRC/ConnorsXinitrc/.xinitrc > ~/.xinitrc
