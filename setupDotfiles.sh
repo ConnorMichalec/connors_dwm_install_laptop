@@ -3,6 +3,11 @@
 #cd into the location of the script file
 cd "$(dirname "$0")"
 
+echo ""
+echo "install dolphin, urxvt, rofi, btop, pamixer, picom, lxsession, feh, qt5ct, lxappearance, konsole, unzip, tmux, vim"
+sudo pacman -Syy
+sudo pacman -S dolphin rxvt-unicode rofi btop pamixer lxsession feh lxappearance qt5ct konsole unzip vim
+
 echo "write .xinitrc"
 cat dotfiles/ConnorsSystemRC/ConnorsXinitrc/.xinitrc > ~/.xinitrc
 
@@ -55,6 +60,10 @@ mkdir ~/.config
 cp -r dotfiles/ConnorsRofiConf/rofi/ ~/.config/.
 
 echo ""
+echo "make sure unzip is installed"
+sudo pacman -S unzip
+
+echo ""
 echo "download and install hack nerd font"
 curl -L -O https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
 sudo unzip Hack.zip -d /usr/share/fonts/TTF/
@@ -73,10 +82,6 @@ echo ""
 echo "append qt5ct required environment vars to /etc/environment"
 sudo bash -c "echo QT_QPA_PLATFORMTHEME=qt5ct >> /etc/environment"
 
-echo ""
-echo "install dolphin, urxvt, rofi, btop, pamixer, picom, lxsession, feh, qt5ct, lxappearance, konsole"
-sudo pacman -Syy
-sudo pacman -S dolphin rxvt-unicode rofi btop pamixer lxsession feh lxappearance qt5ct konsole
 
 #final message:
 echo ""
