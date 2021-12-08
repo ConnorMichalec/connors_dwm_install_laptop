@@ -462,5 +462,6 @@ unset bash_prompt
 
 
 
-
-
+#This changes the tab menu completion slightly to allow user to cycle through the options while also displaying the list of all options
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'
