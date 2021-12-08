@@ -50,7 +50,11 @@ cp -r dotfiles/ConnorsSystemBluetheme/iconThemes/Vimix-Beryl ~/.local/share/icon
 echo ""
 echo "install system theme"
 mkdir ~/.themes
+#FOR GTK
 cp -r dotfiles/ConnorsSystemBluetheme/themes/oomox-ConnorsSystemBluetheme ~/.themes
+#FOR QT5CT
+mkdir -p ~/.config/qt5ct/colors
+cp -r dotfiles/ConnorsSystemBluetheme/themes/oomox-ConnorsSystemBluetheme.conf ~/.config/qt5ct/colors/.
 
 echo ""
 echo "write kde globals(for dolphin)"
