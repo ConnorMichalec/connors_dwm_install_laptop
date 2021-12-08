@@ -1,1 +1,2 @@
 Do note the intended font for all themes is Hack Nerd Font(11pt mostly)
+icon theme intended is Vimix(specifically Vimix-Beryl variant) icons: https://github.com/vinceliuice/vimix-icon-theme
