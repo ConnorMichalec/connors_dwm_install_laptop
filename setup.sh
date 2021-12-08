@@ -104,6 +104,10 @@ echo "install archey(through yay)"
 yay -S archey --noconfirm
 
 echo ""
+echo "install qt5-styleplugins(through yay)" #this adds gtk2 converter option to qt5ct for ui elements
+yay -S qt5-styleplugins --noconfirm
+
+echo ""
 echo "build and install dwm itself"
 cd dwm
 sudo make clean install
