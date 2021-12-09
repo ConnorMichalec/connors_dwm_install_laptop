@@ -54,16 +54,12 @@ vimix-icon-theme/install.sh -a
 sudo rm -r vimix-icon-theme
 
 echo ""
-echo "install system theme"
-mkdir ~/.themes
-#FOR GTK
-cp -r dotfiles/ConnorsSystemBluetheme/themes/oomox-ConnorsSystemBluetheme ~/.themes
-#FOR QT5CT
-mkdir -p ~/.config/qt5ct/colors
-cp -r dotfiles/ConnorsSystemBluetheme/themes/oomox-ConnorsSystemBluetheme.conf ~/.config/qt5ct/colors/.
+echo "write themix colors"
+mkdir -p ~/.config/oomox/colors
+cp dotfiles/ConnorsSystemBluetheme/themixcolors/ConnorsSystemBluetheme ~/.config/oomox/colors/.
 
 echo ""
-echo "write kde globals(for dolphin)"
+echo "write kde globals(for dolphin's broken theming)"
 cat dotfiles/ConnorsSystemBluetheme/kdeGlobals/kdeglobals > ~/.config/kdeglobals
 
 echo ""
@@ -108,6 +104,10 @@ echo "install qt5-styleplugins(through yay)" #this adds gtk2 converter option to
 yay -S qt5-styleplugins --noconfirm
 
 echo ""
+echo "install themix" #this is what i used for creating the theme and is needed to apply it properly
+yay -S themix-full-git --noconfirm
+
+echo ""
 echo "build and install dwm itself"
 cd dwm
 sudo make clean install
@@ -118,7 +118,8 @@ echo ""
 echo "REMAINING STEPS: "
 echo "1) Reboot to make sure services are going"
 echo "2) Firefox theme can be found in dotfiles/ConnorsFirefox, this installs as an addon"
-echo "3) Set GTK2 and GTK3 theme and font, a tool like lxappearance is a good tool that can do both."
-echo "4) Set the QT5 Colorscheme and font using a tool such as qt5ct."
-echo "5) Set konsole theme appropriately, as this will allows konsole's built in terminal to match urxvt"
-echo "6) Set btop to use nordic theme as well as vim keys"
+echo "3) Open themix-gui and export system theme"
+echo "4) Set GTK2 and GTK3 theme and font to the theme just exported, a tool like lxappearance is a good tool that can do both."
+echo "5) Set the QT5 Colorscheme and font to the scheme just exported using a tool such as qt5ct(first set the style to GTK2)."
+echo "6) Set konsole theme appropriately, as this will allows konsole's built in terminal to match urxvt"
+echo "7) Set btop to use nordic theme as well as vim keys"
