@@ -1,5 +1,5 @@
 # connors_dwm_install
-My arch linux dwm installation files
+My arch linux dwm installation files. Script I use for installation on new systems
 
 # Install
 
