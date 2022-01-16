@@ -18,6 +18,9 @@ lxpolkit &
 #start dwm bar
 ~/connors_dwm_install/statusbar.sh &
 
+#start flameshot service
+flameshot &
+
 #start dwm
 exec dwm
 
