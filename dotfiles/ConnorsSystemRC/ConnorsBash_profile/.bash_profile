@@ -1,5 +1,7 @@
-#execute archey on login shell, tmux creates a new login shell so this will execute whenever tmux is opened as well
-archey
+#LOGIN SHELL
+
+#NO LONGER: execute archey on login shell, tmux creates a new login shell so this will execute whenever tmux is opened as well
+#archey3
 
 
 

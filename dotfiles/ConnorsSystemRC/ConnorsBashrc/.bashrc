@@ -1,3 +1,4 @@
+# NON-LOGIN SHELL
 
 # ~/.bashrc
 #
@@ -33,20 +34,24 @@ alias ls='ls --color=auto'
 # fi
 
 #make sure we aren't opening tmux every time tmux opens, also make sure the terminal is not konsole so tmux doesn't run inside dolphin
-if [[ -z "$TMUX" ]] && [[ ! $TERM == "xterm-256color" ]] ;then
-        tmux
-fi
+if [[ ! $TERM == "xterm-256color" ]] ;then
+		#if tmux runs it will launch a login shell so .bashrc will be executed and the formatting will be achieved
+		if [[ -f "/tmp/tmuxCounter" ]];
+		then
+			echo $(($(cat /tmp/tmuxCounter)+1)) > /tmp/tmuxCounter;
+		else
+			echo "0" > /tmp/tmuxCounter;
+		fi	
+		name=$(cat /tmp/tmuxCounter)
+        tmux new-session -d -s "$name"
+		tmux set-option -t "$name" destroy-unattached & #run this as a different process so the session can be attached at the same time and it wont immediately destroy
+		tmux a -t "$name" #close tmux session once we unattach from it
+		
 
+		exit 0; #if tmux closes this will also close the terminal
+ fi
 
-
-
-
-
-
-
-
-
-
+# IF above doesn't execute we are probably in konsole or something and sitll want formatting:
 
 ##	+-----------------------------------+-----------------------------------+
 ##	|                                                                       |
@@ -270,7 +275,7 @@ bash_prompt() {
 	local FONT_COLOR_3=$D_GRAY
 	local BACKGROUND_3=$WHITE
 	local TEXTEFFECT_3=$BOLD
-	
+
 	local PROMT_FORMAT=$WHITE_BOLD
 
 	
@@ -462,6 +467,24 @@ unset bash_prompt
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 #This changes the tab menu completion slightly to allow user to cycle through the options while also displaying the list of all options
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
+
+
+
+
+
+
