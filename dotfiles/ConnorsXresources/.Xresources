@@ -1,7 +1,7 @@
 urxvt.perl-ext-common: resize-font
 
-URxvt*font:xft:Hack Nerd Font:regular:size=11
-!URxvt*font:xft:terminus:regular:size=12
+!Symbola makes braille work
+URxvt*font:xft:Hack Nerd Font:regular:size=11, xft:symbola:size=11
 
 !adjust letter kerning
 URxvt.letterSpace: -1

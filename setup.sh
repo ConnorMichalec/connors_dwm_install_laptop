@@ -7,11 +7,11 @@ set -e
 cd "$(dirname "$0")"
 
 echo ""
-echo "install dolphin, urxvt, rofi, btop, pulseaudio, pamixer, picom, lxsession, feh, qt5ct, lxappearance, konsole, unzip, tmux, vim, base-devel, xorg, xorg-xinit, libx11, libxinerama, libxft, webkit2gtk, ranger, w3m, flameshot, git, firefox"
+echo "install dolphin, urxvt, rofi, pulseaudio, pamixer, picom, lxsession, feh, qt5ct, lxappearance, konsole, unzip, tmux, vim, base-devel, xorg, xorg-xinit, libx11, libxinerama, libxft, webkit2gtk, ranger, w3m, flameshot, git, firefox"
 
 sudo pacman -Syy
 sudo pacman -S archlinux-keyring --noconfirm #to fix pgp correupted problems
-sudo pacman -S dolphin rxvt-unicode rofi btop pulseaudio pamixer picom lxsession feh lxappearance qt5ct konsole unzip tmux vim base-devel xorg xorg-xinit libx11 libxinerama libxft webkit2gtk ranger w3m flameshot git firefox --noconfirm
+sudo pacman -S dolphin rxvt-unicode rofi pulseaudio pamixer picom lxsession feh lxappearance qt5ct konsole unzip tmux vim base-devel xorg xorg-xinit libx11 libxinerama libxft webkit2gtk ranger w3m flameshot git firefox --noconfirm
 
 echo ""
 echo "init dwm submodule"
@@ -125,6 +125,10 @@ echo "install gotop(through yay)"
 yay -S gotop --noconfirm
 
 echo ""
+echo "install symbola font(through yay) so braille characters work in urxvt"
+yay -S ttf-symbola --noconfirm
+
+echo ""
 echo "build and install dwm itself"
 cd dwm
 sudo make clean install
@@ -139,4 +143,4 @@ echo "3) Open themix-gui and export system theme"
 echo "4) Set GTK2 and GTK3 theme and font to the theme just exported, a tool like lxappearance is a good tool that can do both."
 echo "5) Set the QT5 Colorscheme and font to the scheme just exported using a tool such as qt5ct(first set the style to GTK2)."
 echo "6) Set konsole theme appropriately, as this will allows konsole's built in terminal to match urxvt"
-echo "7) Set btop to use nordic theme as well as vim keys"
+#echo "7) Set btop to use nordic theme as well as vim keys"
