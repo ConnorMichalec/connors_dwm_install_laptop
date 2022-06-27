@@ -55,6 +55,7 @@ echo ""
 echo "load tmux config"
 tmux new-session -d -s "test" #needed cuz sometimes the tmux server will not be running so this just creates an empty tmux session so the  server will run.
 tmux source-file /etc/tmux.conf
+tmux kill-session -t "test"
 
 echo ""
 echo "write vimrc"
