@@ -1,1 +1,1 @@
-~/connors_dwm_install_laptop/xserver_rc.sh
+~/connors_dwm_install/xserver_rc.sh
