@@ -16,7 +16,7 @@ feh --bg-fill ~/Pictures/Wallpapers/Stars_space_2monitor_right_1.jpg --bg-fill ~
 lxpolkit & 
 
 #start dwm bar
-~/connors_dwm_install/statusbar.sh &
+~/connors_dwm_install_laptop/statusbar.sh &
 
 #start flameshot service
 flameshot &
