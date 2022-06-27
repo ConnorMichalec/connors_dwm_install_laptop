@@ -135,6 +135,10 @@ cd dwm
 sudo make clean install
 cd ..
 
+echo ""
+echo "add user to video group so they can access backlight and the light command will work"
+sudo usermod -a -G video $USER
+
 #final message:
 echo ""
 echo "REMAINING STEPS: "
