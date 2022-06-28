@@ -131,6 +131,10 @@ echo "install symbola font(through yay) so braille characters work in urxvt"
 yay -S ttf-symbola --noconfirm
 
 echo ""
+echo "install auto-cpufreq(through yay) to make laptop use less battery"
+yay -S auto-cpufreq --noconfirm
+
+echo ""
 echo "build and install dwm itself"
 cd dwm
 sudo make clean install
