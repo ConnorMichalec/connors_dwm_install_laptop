@@ -34,6 +34,36 @@ clock() {
 	printf "^c$foreground^^b$blue^ $(date '+%H:%M, %b %d') "
 }
 
+battery() {
+	PERCENT=$(cat /sys/class/power_supply/BAT0/capacity)
+	STATUS=$(cat /sys/class/power_supply/BAT0/status)
+	
+	
+	if [ "$STATUS" = "Charging" ]; then
+		ICON="";
+		COL="$light_green";
+	else
+		if [ $PERCENT -gt 90 ]; then
+			ICON="";
+			COL="$light_green";
+		elif [ $PERCENT -gt 60 ] && [ $PERCENT -lt 91 ]; then
+			ICON="";
+			COL="$light_green";
+		elif [ $PERCENT -gt 40 ] && [ $PERCENT -lt 61 ]; then
+			ICON="";
+			COL="$light_green";
+		elif [ $PERCENT -gt 20 ] && [ $PERCENT -lt 41 ]; then
+			ICON="";
+			COL="$light_green";
+		else
+			ICON="";
+			COL="$light_red";
+		fi
+	fi
+
+	printf "^c$COL^^b$light_black^ $ICON $PERCENT "
+}
+
 pulseaudiovol() {
     VOL=$(pamixer --get-volume)
     STATE=$(pamixer --get-mute)
@@ -64,7 +94,6 @@ reset() {
 	printf "^c$foreground^^b$background^"
 }
 
-
 updateTicks=200
 tick=0
 
@@ -78,7 +107,7 @@ while true; do
 	fi;	
 	tick=$(($tick + 1))
 
-	barstring="$(pulseaudiovol)$(reset)  $cpu_str$(reset)  $(mem)$(reset)  $(clock)$(reset)  $(end)$(reset) "
+	barstring=" $(pulseaudiovol)$(reset)  $(battery)$(reset)  $cpu_str$(reset)  $(mem)$(reset)  $(clock)$(reset)  $(end)$(reset) "
 	xsetroot -name "$barstring"
 
 	sleep 0.001 #keeps things in check
