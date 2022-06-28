@@ -135,6 +135,10 @@ echo "install auto-cpufreq(through yay) to make laptop use less battery"
 yay -S auto-cpufreq --noconfirm
 
 echo ""
+echo "install ble(through yay) for better terminal formatting"
+yay -S blesh --noconfirm
+
+echo ""
 echo "build and install dwm itself"
 cd dwm
 sudo make clean install
