@@ -438,3 +438,7 @@ unset bash_prompt
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
+
+
+# This gets executed to run blesh for login shells, this is needed cuz tmux runs as login shell
+[[ $- == *i* ]] && . /usr/share/blesh/ble.sh

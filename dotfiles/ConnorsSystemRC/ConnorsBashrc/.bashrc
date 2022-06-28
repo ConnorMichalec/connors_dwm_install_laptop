@@ -1,5 +1,7 @@
 # NON-LOGIN SHELL
 
+[[ $- == *i* ]] && . /usr/share/blesh/ble.sh
+
 # ~/.bashrc
 #
 
@@ -52,6 +54,8 @@ if [[ ! $TERM == "xterm-256color" ]] ;then
  fi
 
 # IF above doesn't execute we are probably in konsole or something and sitll want formatting:
+
+
 
 ##	+-----------------------------------+-----------------------------------+
 ##	|                                                                       |
@@ -486,5 +490,5 @@ bind 'TAB:menu-complete'
 
 
 
-
-
+# other terminals besides urxvt like konsole should also have ble:
+[[ $- == *i* ]] && . /usr/share/blesh/ble.sh
