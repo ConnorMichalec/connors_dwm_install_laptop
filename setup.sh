@@ -123,8 +123,8 @@ echo "install themix(through yay)" #this is what i used for creating the theme a
 yay -S themix-full-git --noconfirm
 
 echo ""
-echo "install gotop(through yay)"
-yay -S gotop --noconfirm
+echo "install btop(through yay)"
+yay -S btop --noconfirm
 
 echo ""
 echo "install symbola font(through yay) so braille characters work in urxvt"
@@ -153,4 +153,4 @@ echo "3) Open themix-gui and export system theme"
 echo "4) Set GTK2 and GTK3 theme and font to the theme just exported, a tool like lxappearance is a good tool that can do both."
 echo "5) Set the QT5 Colorscheme and font to the scheme just exported using a tool such as qt5ct(first set the style to GTK2)."
 echo "6) Set konsole theme appropriately, as this will allows konsole's built in terminal to match urxvt"
-#echo "7) Set btop to use nordic theme as well as vim keys"
+echo "7) Set btop theme+use theme background to false, as well as vim keys"
