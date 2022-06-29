@@ -1,7 +1,5 @@
 # NON-LOGIN SHELL
 
-[[ $- == *i* ]] && . /usr/share/blesh/ble.sh
-
 # ~/.bashrc
 #
 
