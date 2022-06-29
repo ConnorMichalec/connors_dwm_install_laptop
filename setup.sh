@@ -150,4 +150,4 @@ echo "4) Set GTK2 and GTK3 theme and font(to hack nerd font) as well to the them
 echo "5) Set the QT5 Colorscheme and font(to hack nerd font) to the scheme just exported using a tool such as qt5ct(first set the style to GTK2). also select vimix icons"
 echo "6) Set konsole theme appropriately, as this will allows konsole's built in terminal to match urxvt. Do this by creating new profile and selecting the terminal.sexy(good site) in the colorscheme"
 echo "7) Set btop theme, in settings: use theme background to false, as well as use vim keys"
-echo "8) Some good dolphin settings to change: Show previews for txt; Show tooltips ON; Make location bar editable; Set view mode to details." 
+echo "8) Some good dolphin settings to change: Show previews for txt; Show tooltips ON; Set view mode to details." 
