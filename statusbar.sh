@@ -81,6 +81,6 @@ while true; do
 	barstring="$(pulseaudiovol)$(reset)  $cpu_str$(reset)  $(mem)$(reset)  $(clock)$(reset)  $(end)$(reset) "
 	xsetroot -name "$barstring"
 
-	sleep 0.001 #keeps things in check
+	sleep 0.5 # minimize processor usage
 
 done;
