@@ -21,6 +21,9 @@ lxpolkit &
 #start flameshot service
 flameshot &
 
+#start rot8 for screen rotatoin
+rot8 &
+
 #start dwm
 exec dwm
 
