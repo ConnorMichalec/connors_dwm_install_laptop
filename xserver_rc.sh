@@ -3,6 +3,9 @@
 #set mouse sensitvity
 xinput --set-prop 8 'libinput Accel Speed' -0.83
 
+#set thinkpad nipple sensitivity
+xinput --set-prop "TPPS/2 Elan TrackPoint" "libinput Accel Speed" -0.5
+
 #load picom compositor w/ experiment backends
 picom --experimental-backends &
 
