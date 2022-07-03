@@ -110,6 +110,6 @@ while true; do
 	barstring=" $(pulseaudiovol)$(reset)  $(battery)$(reset)  $cpu_str$(reset)  $(mem)$(reset)  $(clock)$(reset)  $(end)$(reset) "
 	xsetroot -name "$barstring"
 
-	sleep 0.9 #delay higher for laptop build(less updates)
+	sleep 0.85 #delay higher for laptop build(less updates)
 
 done;
