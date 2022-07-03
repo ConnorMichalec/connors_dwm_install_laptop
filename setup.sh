@@ -94,6 +94,10 @@ echo "write picom config"
 cp -r dotfiles/ConnorsPicomConf/picom ~/.config/.
 
 echo ""
+echo "write networkmanager-dmenu config"
+cp -r dotfiles/ConnorsNetworkmanagerDmenuConf/networkmanager-dmenu ~/.config/.
+
+echo ""
 echo "write wallpapers"
 mkdir -p ~/Pictures
 cp -r dotfiles/ConnorsWallpapers/Wallpapers ~/Pictures/.
@@ -133,6 +137,10 @@ yay -S ttf-symbola --noconfirm
 echo ""
 echo "install ble(through yay) for better terminal formatting"
 yay -S blesh --noconfirm
+
+echo ""
+echo "install networkmanager-dmenu(through yay) for networking interface in rofi"
+yay -S networkmanager-dmenu --noconfirm
 
 echo ""
 echo "build and install dwm itself"
