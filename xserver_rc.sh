@@ -21,6 +21,9 @@ lxpolkit &
 #start flameshot service
 flameshot &
 
+#start dunst 
+dunst &
+
 #start dwm
 exec dwm
 
