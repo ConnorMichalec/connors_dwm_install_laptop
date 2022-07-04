@@ -27,6 +27,9 @@ flameshot &
 #start rot8 for screen rotatoin, you may have to edit the touchescreen input devices appropriately with xinput --list in order for the input devices to rotate
 rot8 --touchscreen "Wacom HID 5308 Finger" "Wacom HID 5308 Pen Pen (0x81a19ebc)" --threshold 0.8 &
 
+#start dunst 
+dunst &
+
 #start dwm
 exec dwm
 

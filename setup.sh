@@ -7,11 +7,11 @@ set -e
 cd "$(dirname "$0")"
 
 echo ""
-echo "install dolphin, urxvt, rofi, pulseaudio, pamixer, picom, lxsession, feh, qt5ct, lxappearance, konsole, unzip, tmux, vim, base-devel, xorg, xorg-xinit, libx11, libxinerama, libxft, webkit2gtk, ranger, w3m, flameshot, git, firefox, light, tlp"
+echo "install dolphin, urxvt, rofi, pulseaudio, pamixer, picom, lxsession, feh, qt5ct, lxappearance, konsole, unzip, tmux, vim, base-devel, xorg, xorg-xinit, libx11, libxinerama, libxft, webkit2gtk, ranger, w3m, flameshot, git, firefox, light, tlp, dmenu, dunst"
 
 sudo pacman -Syy
 sudo pacman -S archlinux-keyring --noconfirm #to fix pgp correupted problems
-sudo pacman -S dolphin rxvt-unicode rofi pulseaudio pamixer picom lxsession feh lxappearance qt5ct konsole unzip tmux vim base-devel xorg xorg-xinit libx11 libxinerama libxft webkit2gtk ranger w3m flameshot git firefox light tlp --noconfirm
+sudo pacman -S dolphin rxvt-unicode rofi pulseaudio pamixer picom lxsession feh lxappearance qt5ct konsole unzip tmux vim base-devel xorg xorg-xinit libx11 libxinerama libxft webkit2gtk ranger w3m flameshot git firefox light tlp dmenu dunst --noconfirm
 
 echo ""
 echo "enable tlp(battery management) service"
@@ -80,6 +80,11 @@ cp dotfiles/ConnorsSystemBluetheme/themixcolors/ConnorsSystemBluetheme ~/.config
 echo ""
 echo "write kde globals(for dolphin's broken theming)"
 cat dotfiles/ConnorsSystemBluetheme/kdeGlobals/kdeglobals > ~/.config/kdeglobals
+
+echo ""
+echo "write dunst config"
+mkdir -p ~/.config/dunst/
+cp dotfiles/ConnorsDunstRc/dunstrc ~/.config/dunst/.
 
 echo ""
 echo "write rofi config files"
