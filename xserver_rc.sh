@@ -1,7 +1,7 @@
 #Run dis on the start of the xserver(should be placed in .xinitrc if there is no login/display manager)
 
 #set mouse sensitvity
-xinput --set-prop 8 'libinput Accel Speed' -0.83
+xinput --set-prop 'pointer:Logitech G502' 'libinput Accel Speed' -0.83
 
 #load picom compositor w/ experiment backends
 picom --experimental-backends &
