@@ -10,7 +10,7 @@ xinput --set-prop "TPPS/2 Elan TrackPoint" "libinput Accel Speed" -0.5
 picom --experimental-backends &
 
 #load desktop wallpaper
-feh --bg-fill ~/Pictures/Wallpapers/Stars_space_2monitor_right_1.jpg --bg-fill ~/Pictures/Wallpapers/Stars_space_2monitor_left_1.jpg
+feh --bg-fill ~/Pictures/Wallpapers/Stars_space_2monitor_left_1.jpg --bg-fill ~/Pictures/Wallpapers/Stars_space_2monitor_right_1.jpg
 
 #load Xresources
 [[ -f ~/.Xresources ]] && xrdb ~/.Xresources

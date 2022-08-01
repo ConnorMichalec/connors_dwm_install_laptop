@@ -7,11 +7,11 @@ set -e
 cd "$(dirname "$0")"
 
 echo ""
-echo "install dolphin, urxvt, rofi, pulseaudio, pamixer, picom, lxsession, feh, qt5ct, lxappearance, konsole, unzip, tmux, vim, base-devel, xorg, xorg-xinit, libx11, libxinerama, libxft, webkit2gtk, ranger, w3m, flameshot, git, firefox, light, tlp, dmenu, dunst"
+echo "install dolphin, urxvt, rofi, pulseaudio, pamixer, picom, lxsession, feh, qt5ct, lxappearance, konsole, unzip, tmux, vim, base-devel, xorg, xorg-xinit, libx11, libxinerama, libxft, webkit2gtk, ranger, w3m, flameshot, git, firefox, light, tlp, dmenu, dunst, xarchiver"
 
 sudo pacman -Syy
 sudo pacman -S archlinux-keyring --noconfirm #to fix pgp correupted problems
-sudo pacman -S dolphin rxvt-unicode rofi pulseaudio pamixer picom lxsession feh lxappearance qt5ct konsole unzip tmux vim base-devel xorg xorg-xinit libx11 libxinerama libxft webkit2gtk ranger w3m flameshot git firefox light tlp dmenu dunst --noconfirm
+sudo pacman -S dolphin rxvt-unicode rofi pulseaudio pamixer picom lxsession feh lxappearance qt5ct konsole unzip tmux vim base-devel xorg xorg-xinit libx11 libxinerama libxft webkit2gtk ranger w3m flameshot git firefox light tlp dmenu dunst xarchiver --noconfirm
 
 echo ""
 echo "enable tlp(battery management) service"
