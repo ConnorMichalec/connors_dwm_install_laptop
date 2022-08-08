@@ -14,6 +14,10 @@ sudo pacman -S archlinux-keyring --noconfirm #to fix pgp correupted problems
 sudo pacman -S dolphin rxvt-unicode rofi pulseaudio pamixer picom lxsession feh lxappearance qt5ct konsole unzip tmux vim base-devel xorg xorg-xinit libx11 libxinerama libxft webkit2gtk ranger w3m flameshot git firefox light tlp dmenu dunst xarchiver --noconfirm
 
 echo ""
+echo "enable tlp(battery management) service"
+sudo systemctl enable tlp
+
+echo ""
 echo "init dwm submodule"
 git submodule update --init 
 
