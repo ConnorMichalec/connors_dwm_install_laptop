@@ -4,7 +4,7 @@
 xinput --set-prop 'pointer:Logitech G502' 'libinput Accel Speed' -0.83
 
 #set thinkpad nipple sensitivity
-xinput --set-prop "TPPS/2 Elan TrackPoint" "libinput Accel Speed" -0.2
+xinput --set-prop "TPPS/2 Elan TrackPoint" "libinput Accel Speed" -0.10
 
 #load picom compositor w/ experiment backends
 picom --experimental-backends &
